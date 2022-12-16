@@ -34,14 +34,15 @@ function getUserInfo() {
 // 渲染用户头像
 function renderAvatar(user) {
     // 获取用户名称
+    // console.log(user);
     var name = user.nickname || user.username
     // 设置欢迎文本
     $('.welcome').html('欢迎&nbsp;&nbsp;' + name)
     // 渲染用户头像
     if (user.user_pic !== null) {
         // 渲染用户头像
-        $('.layui-nav-img').prop('src', user.user_pic)
-        $('text-avatar').hide()
+        $('.layui-nav-img').prop('src', user.user_pic).show()
+        $('.text-avatar').hide()
     } else {
         // 渲染文本头像
         var first = name[0].toUpperCase()
